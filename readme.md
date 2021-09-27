@@ -16,7 +16,7 @@ We have 3 Sample APIs, including one that consumes and returns XML. The calls ar
 The main idea is to include asynchronous calls for each API so we don´t have to wait for the response of each request.
 
 
-![Sync and Async flows, one repeats n times, the other calls 3 requests](./async_sync.jpg "Sync/Async differences")
+![Sync and Async flows, one repeats n times, the other calls 3 requests](https://github.com/SantiagoD/MultipleApiRequestSolution/blob/master/async_sync.JPG?raw=true "Sync/Async differences")
 
 Sending multiple requests at the same time we reduce the response time, depending on the longest duration of the set as our critical path.
 
@@ -24,7 +24,7 @@ Sending multiple requests at the same time we reduce the response time, dependin
 To organize the artifacts in the project we have a hierarchy of a creator/factory abstract class called *CompanyApiCreator* that allows to create an instance of one of the used APIs utility classes.
 
 
-![CompanyApiCreator class diagram](./creator_class.jpg "CompanyApiCreator class diagram")
+![CompanyApiCreator class diagram](https://github.com/SantiagoD/MultipleApiRequestSolution/blob/master/creator_class.JPG?raw=true "CompanyApiCreator class diagram")
 
 We have a factory method *CreateCompanyApi* for instantiating each type.
 That abstract class also encapsulates the method to run the whole process of creating the requests and processing the results.
@@ -32,7 +32,7 @@ That abstract class also encapsulates the method to run the whole process of cre
 For Company API utility classes we have an abstract class *ICompanyApi* that implements the generic call on the method *SearchPrice* so we can easily maintain that code and add new APIs.
 
 
-![ICompanyApi class diagram](./api_class.jpg "ICompanyApi class diagram")
+![ICompanyApi class diagram](https://github.com/SantiagoD/MultipleApiRequestSolution/blob/master/api_class.JPG?raw=true "ICompanyApi class diagram")
 
 That class also defines common properties that can be setted for each API. 
 - *ApiType*: JSON or XML
